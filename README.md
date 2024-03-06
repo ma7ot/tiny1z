@@ -15,6 +15,36 @@ The Tiny1z API Client is a powerful and lightweight npm package designed to simp
 ```bash
 npm install tiny1z
 ```
+
+## Get a Tiny1z API Key
+
+To integrate the Tiny1z API into your applications, you'll need a Tiny1z API key. Follow these steps to obtain your API key:
+
+1. **Sign up for a Tiny1z account:**
+   - If you don't already have a Tiny1z account, sign up by visiting [Tiny1z Signup](https://tiny1z.com/signup).
+
+2. **Access your developer dashboard:**
+   - Log in to your Tiny1z account and navigate to the [Tiny1z developer dashboard](https://tiny1z.com/account/api-dashboard).
+
+3. **Retrieve your API key:**
+   - In the developer dashboard, locate the section that provides your API key.
+   - Copy the API key; you will need it for making requests to the Tiny1z API.
+
+Now you are ready to start using the Tiny1z api.
+
+Example:
+```javascript
+import { createSingleUrl } from 'tiny1z';
+
+const apiKey = 'your-api-key';
+const data = {
+  originalUrl: 'https://www.example.com',
+  // additional data...
+};
+
+const response = await createSingleUrl(data, apiKey);
+```
+
 ## Usage
 
 ```javascript
@@ -77,7 +107,7 @@ const allUserUrls = await getAllUrls(offset, limit, sort, apiKey);
 
 # API Documentation
 
-For detailed information on API endpoints, parameters, and response formats, refer to the [Tiny1z API Documentation](https://tiny1z.com/docs).
+For detailed information on API endpoints, parameters, and response formats, refer to the [Tiny1z API Documentation](https://t1z.li/tiny1z-api).
 
 ## Rate and Usage Limits
 
@@ -85,8 +115,5 @@ Be aware of the rate and usage limits when using the Tiny1z API. Ensure you incl
 
 ## Contributing
 
-If you'd like to contribute to the development of this package, feel free to submit pull requests or open issues on the [GitHub repository](https://github.com/your-username/tiny1z).
+If you'd like to contribute to the development of this package, feel free to submit pull requests or open issues on the [GitHub repository](https://github.com/ma7ot/tiny1z).
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
