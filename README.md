@@ -1,4 +1,9 @@
-# Tiny1z API Client
+<p align="center">
+  <a href="https://nextui.org">
+      <img width="20%" src="https://tiny1z.com/assets/logo.png" alt="nextui" />
+      <h1 align="center">Tiny1z URL Shortner  API Client</h1>
+  </a>
+</p>
 
 The Tiny1z API Client is a powerful and lightweight npm package designed to simplify the integration of Tiny1z URL Shortener API into your applications. This client provides functions to create short URLs, retrieve user-specific URLs, get information about a single URL, and fetch all created URLs.
 
