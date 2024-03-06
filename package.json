@@ -35,6 +35,8 @@
     "type": "git",
     "url": "https://github.com/ma7ot/tiny1z"
   },
-  "homepage": "https://tiny1z.com" 
+  "homepage": "https://tiny1z.com",
+  "types": "typings/tiny1z.d.ts"
+
 
 }
