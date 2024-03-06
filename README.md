@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://nextui.org">
+  <a href="https://tiny1z.com">
       <img width="20%" src="https://tiny1z.com/assets/logo.png" alt="nextui" />
       <h1 align="center">Tiny1z URL Shortner  API Client</h1>
   </a>
