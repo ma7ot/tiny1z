@@ -1,0 +1,30 @@
+{
+  "name": "tiny1z",
+  "version": "1.0.0",
+  "description": "The Tiny1z API Client is a convenient and lightweight npm package that allows developers to seamlessly integrate the Tiny1z URL Shortener API into their applications. Simplify URL shortening, retrieval, and management with just a few lines of code.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "url",
+    "shotner",
+    "tiny1z",
+    "tiny",
+    "url"
+  ],
+  "author": "tiny1z",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.24.0",
+    "@babel/preset-env": "^7.24.0",
+    "@babel/preset-react": "^7.23.3",
+    "babel-loader": "^9.1.3",
+    "webpack": "^5.90.3",
+    "webpack-cli": "^5.1.4"
+  }
+}
