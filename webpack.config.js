@@ -1,22 +1,23 @@
-// webpack.config.js
 const path = require('path');
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
 module.exports = {
-  entry: './index.js',
+  mode: 'production', // or 'development'
+  entry: './index.ts',
   output: {
-    path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
-    libraryTarget: 'umd',
-    library: 'tiny1z',
+    path: path.resolve(__dirname, 'dist'),
+  },
+  resolve: {
+    extensions: ['.ts', '.js'],
+    plugins: [new TsconfigPathsPlugin({ configFile: './tsconfig.json' })],
   },
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.ts$/,
+        loader: 'ts-loader',
         exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-        },
       },
     ],
   },

@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+      "target": "es5",
+      "module": "commonjs",
+      "strict": true,
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "forceConsistentCasingInFileNames": true,
+      "moduleResolution": "node",
+      "resolveJsonModule": true,
+      "allowJs": true,
+      "declaration": true,
+      "outDir": "./dist",
+      "typeRoots": ["./typings", "./node_modules/@types"],
+    },
+    "include": ["**/*.ts", "index.ts"],
+    "exclude": ["node_modules", "dist"]
+  }
+  
