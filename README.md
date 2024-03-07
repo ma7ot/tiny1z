@@ -20,6 +20,10 @@ The Tiny1z API Client is a powerful and lightweight npm package designed to simp
 ```bash
 npm install tiny1z
 ```
+or
+```bash
+yarn add tiny1z
+```
 
 ## Get a Tiny1z API Key
 
