@@ -43,39 +43,29 @@ To integrate the Tiny1z API into your applications, you'll need a Tiny1z API key
 
 Now you are ready to start using the Tiny1z api.
 
-Example:
-```javascript
-import { createSingleUrl } from 'tiny1z';
-
-const apiKey = 'your-api-key';
-const data = {
-  originalUrl: 'https://www.example.com',
-  // additional data...
-};
-
-const response = await createSingleUrl(data, apiKey);
-```
-
 ## Usage
 
-```javascript
-// Import Tiny1z API functions
-import { createSingleUrl, createBulkUrl, getUserUrls, singleUrlInfo, getAllUrls } from 'tiny1z';
+```typescript
+// Import the Tiny1zClient class
+import Tiny1zClient from 'tiny1z';
 
 // Replace 'your-api-key' with your actual API key
 const apiKey = 'your-api-key';
 
+// Instantiate the client
+const client = new Tiny1zClient(apiKey);
+
 // Create a single URL
 const singleUrlData = {
-    "original_url": "https://www.example.com", // Required: The original URL to be shortened.
-    "alias": "alias-example", // Optional: A custom alias for the shortened URL.
-    "password": "123456", // Optional: A password to access the url
-    "expiry_duration": 5, // Optional: Expiry duration
-    "expiry_unit": "hours", // Optional: Expiry unit. Accepts 'hours', 'days' or 'months' only.
-    "user_reference": "adam" // Optional: Any tag like a user_id or anything you wish to label this url with
+  url: "https://www.example.com", // Required: The original URL to be shortened.
+  alias: "alias-example",         // Optional: A custom alias for the shortened URL.
+  password: "123456",             // Optional: A password to access the URL.
+  expiry_duration: 5,             // Optional: Expiry duration.
+  expiry_unit: "hours",           // Optional: Expiry unit ('hours', 'days', or 'months').
+  user_reference: "adam"          // Optional: Any tag like a user_id or label for this URL.
 };
 
-const singleUrlResponse = await createSingleUrl(singleUrlData, apiKey);
+const singleUrlResponse = await client.createSingleUrl(singleUrlData);
 
 // Create multiple URLs in bulk
 const bulkData = {
@@ -97,28 +87,26 @@ const bulkData = {
   "user_reference": "ali" // Optional: Any tag like a user_id, username or anything you wish to label this urls with
 };
 
-
-const bulkUrlResponse = await createBulkUrl(bulkData, apiKey);
+const bulkUrlResponse = await client.createBulkUrl(bulkData);
 
 // Get user URLs by user reference
-const userReference = 'user_reference'; // Required: The user reference used when creating the URLs.
-const userUrls = await getUserUrls(userReference, apiKey);
+const userReference = 'user_reference'; // The user reference used when creating the URLs.
+const userUrls = await client.getUserUrls(userReference);
 
 // Get information about a single URL by slug
-const slug = 'alias-example'; // Required: The slug/alias of the short URL you want to fetch.
-const singleUrlInfoResponse = await singleUrlInfo(slug, apiKey);
+const slug = 'alias-example'; // The slug/alias of the short URL you want to fetch.
+const singleUrlInfoResponse = await client.singleUrlInfo(slug);
 
 // Get all user URLs with pagination and sorting
-const offset = 0; // Required: The starting index from which the data should be fetched.
-const limit = 10; // Required: The maximum number of rows to be fetched.
-const sort = 'desc'; // Required: The sorting method for the fetch operation ('desc' or 'asc').
-const allUserUrls = await getAllUrls(offset, limit, sort, apiKey);
-
+const offset = 0; // The starting index from which the data should be fetched.
+const limit = 10; // The maximum number of rows to be fetched.
+const sort = 'desc'; // The sorting method for the fetch operation ('desc' or 'asc').
+const allUserUrls = await client.getAllUrls(offset, limit, sort);
 ```
 
 # API Documentation
 
-For detailed information on API endpoints, parameters, and response formats, refer to the [Tiny1z API Documentation](https://t1z.li/tiny1z-api).
+For detailed information on API endpoints, parameters, and response formats, refer to the [Tiny1z API Documentation](https://t1z.co/tiny1z-api).
 
 ## Rate and Usage Limits
 
