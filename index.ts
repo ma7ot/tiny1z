@@ -1,7 +1,7 @@
 // Tiny1z API Client - Modern, class-based, and typed
 
 export interface SingleUrlData {
-  original_urls: string;
+  original_url: string;
   alias?: string;
   password?: string;
   expiry_duration?: number;
