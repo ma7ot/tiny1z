@@ -1,3 +1,4 @@
+// const url = 'http://localhost:3000';
 const url = 'https://tiny1z.com'; // LIVE
 
 export const createSingleUrl = async (data: any, apiKey: string): Promise<any> => {
