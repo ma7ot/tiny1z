@@ -31,8 +31,8 @@ yarn add tiny1z
 
 ## Get a Tiny1z API Key
 
-1. **Sign up:** [Tiny1z Signup](https://tiny1z.com/signup)
-2. **Go to your dashboard:** [API Dashboard](https://tiny1z.com/account/api-dashboard)
+1. **Sign up:** [Tiny1z Signup](https://tiny1z.com/signup) (FREE)
+2. **Go to your dashboard:** [API Dashboard](https://tiny1z.com/account/api-dashboard) (Free Package Available)
 3. **Copy your API key** for use in your app.
 
 ---
