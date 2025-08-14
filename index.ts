@@ -86,7 +86,7 @@ export default class Tiny1zClient {
   /** Fetch all URLs created by the authenticated user */
   async getAllUrls(offset = 0, limit = 10, sort: SortOrder = 'desc') {
     return this.request(
-      `/api/v1/user?offset=${offset}&limit=${limit}&sort=${sort}`,
+      `/api/v1/user/all?offset=${offset}&limit=${limit}&sort=${sort}`,
       'GET'
     );
   }
