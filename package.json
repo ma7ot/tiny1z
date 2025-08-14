@@ -1,6 +1,6 @@
 {
   "name": "tiny1z",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "The Tiny1z API Client is a convenient and lightweight npm package that allows developers to seamlessly integrate the Tiny1z URL Shortener API into their applications. Simplify URL shortening, retrieval, and management with just a few lines of code.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
